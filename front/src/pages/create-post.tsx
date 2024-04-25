@@ -12,7 +12,7 @@ const CreatePost = () => {
 
         console.log("title", title, "content", content);
         try { //try-catch文でエラーハンドリング
-            await axios.post("http://back:3000/api/v1/posts", { 
+            await axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/posts`, { 
                 title: title,//titleとcontentをオブジェクトとして送信
                 content: content,
             

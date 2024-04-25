@@ -10,7 +10,7 @@ type Props  = {
 
 export async function getServerSideProps(context: any) { //SSR = リクエスト時のみデータを取得したい時使用。の場合はgetServerSidePropsを使用
     const id = context.params.id; //idを取得
-    const res = await fetch(`http://back:3000/api/v1/posts/${id}`); //Next.jsは取得したデータを静的ページとして事前に用意する
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/posts/${id}`); //Next.jsは取得したデータを静的ページとして事前に用意する
     const post = await res.json(); 
     return {
         props: {
@@ -29,7 +29,7 @@ const EditPost = ({ post }: Props) => {
 
         console.log("title", title, "content", content);
         try { //try-catch文でエラーハンドリング
-            await axios.put(`http://back:3000/api/v1/posts/${post.id}`, { 
+            await axios.put(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/v1/posts/${post.id}`, { 
                 title: title,//titleとcontentをオブジェクトとして送信
                 content: content,
             
