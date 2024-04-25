@@ -10,7 +10,7 @@ type Props = {
 //pages/posts/[id].tsx
 
 export async function getStaticPaths() { //ビルド時に動的ルーティングの設定時に使用される = getStaticPaths
-    const res = await fetch('http://localhost:3001/api/v1/posts'); //Next.jsは取得したデータを静的ページとして事前に用意する
+    const res = await fetch('http://localhost:3000/api/v1/posts'); //Next.jsは取得したデータを静的ページとして事前に用意する
     const posts: Post[] = await res.json();
     const paths = posts.map((post) => ({
         params: { id: post.id.toString() },//文字列に変換し、URLパラメータとして使用
