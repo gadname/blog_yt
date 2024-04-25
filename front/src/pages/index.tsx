@@ -14,7 +14,7 @@ type Props = {
 }
 
 export async function getStaticProps() { //データを事前に取得してサーバーサイドで事前にhttp://localhost:3001/api/v1/postsからデータを生成
-  const res = await fetch("http://localhost:3000/api/v1/posts");
+  const res = await fetch("http://back:3000/api/v1/posts");
   const posts = await res.json();
 
   console.log("posts",posts);
@@ -31,7 +31,7 @@ export default function Home({ posts }: Props) { //postsオブジェクトの型
   const router = useRouter();
   const handleDelete = async (postId: string) => {
     try{
-      await axios.delete(`http://localhost:3000/api/v1/posts/${postId}`);
+      await axios.delete(`http://back:3000/api/v1/posts/${postId}`);
   router.push("/");
     } catch (err) {
       alert("削除に失敗しました")
