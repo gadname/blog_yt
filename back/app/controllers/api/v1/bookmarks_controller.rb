@@ -1,4 +1,4 @@
-class Api::BookmarksController < ApplicationController
+class Api::V1::BookmarksController < ApplicationController
     before_action :set_bookmark, only: [:destroy]
   
     def index
