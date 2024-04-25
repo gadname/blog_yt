@@ -1,5 +1,5 @@
 import React from 'react';
-import { Post } from '@/types'; //Post型をインポート
+import type { Post } from '@/types'; //Post型をインポート
 import { useRouter } from 'next/router';
 import styles from '@/styles/Post.module.css';
 
