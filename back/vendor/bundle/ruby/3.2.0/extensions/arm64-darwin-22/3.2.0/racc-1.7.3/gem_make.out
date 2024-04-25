@@ -1,0 +1,19 @@
+current directory: /Users/namikawagaku/workspace/blog-yt/back/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+/Users/namikawagaku/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/namikawagaku/workspace/blog-yt/back/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240425-38726-r77udy sitelibdir\=./.gem.20240425-38726-r77udy clean
+
+current directory: /Users/namikawagaku/workspace/blog-yt/back/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240425-38726-r77udy sitelibdir\=./.gem.20240425-38726-r77udy
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/namikawagaku/workspace/blog-yt/back/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240425-38726-r77udy sitelibdir\=./.gem.20240425-38726-r77udy install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240425-38726-r77udy/racc
+
+current directory: /Users/namikawagaku/workspace/blog-yt/back/vendor/bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240425-38726-r77udy sitelibdir\=./.gem.20240425-38726-r77udy clean
